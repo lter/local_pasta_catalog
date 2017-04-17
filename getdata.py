@@ -9,7 +9,7 @@ scopeSearch=["scope:knb-lter-sbc","-scope:ecotrends","-scope:lter-landsat*"]
 fieldsReturned='*' 
 sortList=["score,desc","packageid,asc"] 
 doDebug="false" 
-startRecord=1 
+startRecord=0 
 returnNumRows=10
 
 queryString="defType="+defType 
