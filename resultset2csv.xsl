@@ -13,12 +13,12 @@
                         <xsl:for-each select="keyword">
                         <xsl:value-of select="."/><xsl:text>; </xsl:text>   
                         </xsl:for-each>
-                    </xsl:for-each><xsl:text>",</xsl:text>
+                    </xsl:for-each><xsl:text>","</xsl:text>
                         <xsl:for-each select="authors">
                             <xsl:for-each select="author">
                                 <xsl:value-of select="."/><xsl:text>; </xsl:text> 
                             </xsl:for-each>
-                        </xsl:for-each>
+                        </xsl:for-each><xsl:text>",</xsl:text>
           
             <xsl:value-of select="./begindate"/><xsl:text>,</xsl:text><xsl:value-of select="./enddate"/><xsl:text>,</xsl:text> 
             <xsl:value-of select="./doi"/><xsl:text>
