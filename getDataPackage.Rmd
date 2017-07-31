@@ -1,0 +1,43 @@
+---
+title: "Data Package"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, include = FALSE}
+library(xml2)
+library(httr)
+library(tidyverse)
+```
+
+```{r getFormatXML, include = FALSE}
+dataset <- GET("https://portal.lternet.edu/nis/metadataviewer?packageid=knb-lter-cap.648.newest&contentType=application/xml")
+parsedDataset <- content(dataset, "parse")
+datasetContents <- xml_contents(parsedDataset)
+```
+
+### Title
+
+```{r, echo = FALSE, comment = NA}
+cat(datasetContents %>% xml_find_all("title") %>% xml_text())
+```
+
+### Publication Date
+
+```{r, echo = FALSE, comment = NA}
+cat(datasetContents %>% xml_find_all("pubDate") %>% xml_text())
+```
+
+### Abstract
+
+```{r, echo = FALSE, comment = NA}
+cat(datasetContents %>% xml_find_all("abstract") %>% xml_text())
+```
+
+*.*  
+*.*  
+*.*  
+__*add all desired metadata elements and CSS to suit*__
