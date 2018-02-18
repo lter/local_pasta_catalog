@@ -5,7 +5,7 @@ library(shiny)
 library(shinyjs)
 
 createLink <- function(val) {
-  sprintf('<a href="https://dx.doi.org/%s" target="_blank">DATA</a>', val)
+  sprintf('<a href="https://doi.org/%s" target="_blank">DATA</a>', val)
   # sprintf('<a href="https://www.google.com/#q=%s" target="_blank" class="btn btn-primary">Info</a>',val)
 }
 
