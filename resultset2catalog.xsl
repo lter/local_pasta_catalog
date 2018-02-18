@@ -11,7 +11,7 @@
         <xsl:for-each select="document">
             <xsl:element name="document">
                 <tr><td><xsl:element name="a">
-                    <xsl:attribute name="href">https://dx.doi.org/<xsl:value-of select='substring(./doi,5)'/></xsl:attribute>
+                    <xsl:attribute name="href">https://doi.org/<xsl:value-of select='substring(./doi,5)'/></xsl:attribute>
                     <xsl:value-of select="./packageid"/>
                 </xsl:element>  
                     </td>
